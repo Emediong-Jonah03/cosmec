@@ -3,7 +3,7 @@ function Content() {
   return (
     <main>
       <div>
-        <div className="flex flex-col sm:flex-row justify-around items-start py-2 gap-2">
+        <div className="flex flex-col sm:flex-row justify-around items-start py-2 gap-2 px-3">
           <p>Showiing 1 - 12 of 1560 results</p>
           <p>Sort by:</p>
           <p>Default sorting</p>
