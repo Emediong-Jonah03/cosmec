@@ -1,23 +1,23 @@
-
+import { FaStar } from "react-icons/fa";
 function Filter() {
 
     return(
-        <section className="px-7 py-3 bg-white shadow-2xl rounded-2xl mr-2.5">
+        <section className="px-7 py-3 bg-white shadow rounded-2xl mr-3 w-auto justify-evenly flex flex-col">
             <h2 className="font-bold text-2xl">Filter options</h2>
             <div>
                 <h3 className="font-bold text-xl">By Categories</h3>
-                <p>Skin Care</p>
-                <p>Make up</p>
-                <p>Hair Care</p>
-                <p>Body Care</p>
-                <p>Nail Care</p>
+                <p className="cursor-pointer hover:text-green-700">Skin Care</p>
+                <p className="cursor-pointer hover:text-green-700">Make up</p>
+                <p className="cursor-pointer hover:text-green-700">Hair Care</p>
+                <p className="cursor-pointer hover:text-green-700">Body Care</p>
+                <p className="cursor-pointer hover:text-green-700">Nail Care</p>
             </div>
             <div>
                 <h3 className="font-bold text-xl">By skin Type</h3>
-                <p>Oily</p>
-                <p>Dry</p>
-                <p>Combination</p>
-                <p>Sensitive</p>
+                <p className="cursor-pointer hover:text-green-700">Oily</p>
+                <p className="cursor-pointer hover:text-green-700">Dry</p>
+                <p className="cursor-pointer hover:text-green-700">Combination</p>
+                <p className="cursor-pointer hover:text-green-700">Sensitive</p>
                 
             </div>
             <div>
@@ -26,21 +26,21 @@ function Filter() {
             </div>
             <div>
                 <h3 className="font-bold text-xl">Review</h3>
-                <p>1</p>
-                <p>2</p>
-                <p>3</p>
-                <p>4</p>
-                <p>5</p>
+                <p className="text-amber-300 flex gap-2 hover:cursor-pointer my-2"><FaStar /></p>
+                <p className="text-amber-300 flex gap-2 hover:cursor-pointer my-2"><FaStar /><FaStar /></p>
+                <p className="text-amber-300 flex gap-2 hover:cursor-pointer my-2"><FaStar /><FaStar /><FaStar /></p>
+                <p className="text-amber-300 flex gap-2 hover:cursor-pointer my-2"><FaStar /><FaStar /><FaStar /><FaStar /></p>
+                <p className="text-amber-300 flex gap-2 hover:cursor-pointer my-2"><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></p>
             </div>
             <div>
                 <h3 className="font-bold text-xl">By Promotions</h3>
                 <div>
                     <input type="checkbox" name="best-seller" id="" />
-                    <p className="inline">Best Sellers</p>
+                    <p className="inline hover:text-green-700">Best Sellers</p>
                 </div>
                 <div>
                      <input type="checkbox" name="new-arrival" id="" />
-                     <p  className="inline">New arrival</p>
+                     <p  className="inline hover:text-green-700">New arrival</p>
                 </div>
 
             </div>
@@ -48,11 +48,11 @@ function Filter() {
                 <h3 className="font-bold text-xl">Availability</h3>
                 <div>
                      <input type="checkbox" name="" id="" />
-                     <p  className="inline">In Stock</p>
+                     <p  className="inline hover:text-green-700">In Stock</p>
                 </div>
                 <div>
                      <input type="checkbox" name="" id="" />
-                     <p  className="inline">Out of Stock</p>
+                     <p  className="inline hover:text-green-700">Out of Stock</p>
                 </div>
             </div>
         </section>
