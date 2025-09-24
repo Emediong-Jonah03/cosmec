@@ -1,30 +1,38 @@
-import Header from "./components/header";
-import NavBar from "./components/navigation";
-import Hero from "./components/hero";
-import Content from "./components/content";
-import Filter from "./components/filter";
-import Product from "./components/products";
-import Footer from "./components/footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
-import productData from "./productData";
+import Layout from "./components/Layout/layout";
+
+import Login from "./pages/auth/login";
+import SignUp from "./pages/auth/signup";
+
+import Home from "./pages/home";
+import Cart from "./pages/Cart";
+
 function App() {
-  const productsElement = productData.map((product) => {
-    return <Product key={product.id} {...product} />;
-  });
+    const [search, setSearch] = useState(false)
+
+   function toggleSearch() {
+    setSearch(prev => !prev)
+   }
+
   return (
-    <>
-      <Header />
-      <NavBar />
-      <Hero />
-      <Content />
-      <div className="flex items-stretch justify-center">
-        <Filter />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-          {productsElement}
-        </div>
-      </div>
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        {/* ✅ Layout Parent Route */}
+        <Route element={<Layout toggleSearch={toggleSearch} />}>
+          <Route index element={<Home  search={search}/>} />      {/* default child = "/" */}
+          <Route path="cart" element={<Cart />} />
+        </Route>
+
+        {/* ✅ Standalone Auth Routes */}
+        <Route path="login" element={<Login />} />
+        <Route path="signup" element={<SignUp />} />
+
+        {/* ✅ Catch-All */}
+        <Route path="*" element={<h1>404 Page Not Found</h1>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

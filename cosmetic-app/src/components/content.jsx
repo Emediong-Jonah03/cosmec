@@ -9,15 +9,15 @@ function Content() {
           <p>Default sorting</p>
         </div>
         <div className="flex flex-col sm:flex-row justify-evenly items-center py-2 gap-2 overflow-x-auto text-sm">
-          <p>Active filter:</p>
-          <div className="bg-green-800 text-white px-3 rounded-full whitespace-nowrap">
-            Price: $10.00 - $100.00 X
+          <p className="text-xl">Active filter:</p>
+          <div className="bg-zinc-50 text-black font-bold shadow rounded-2xl px-2 py-1">
+           <p className="inline text-red-500 rounded-full px-1 font-normal bg-zinc-300 hover:cursor-pointer hover:font-bold">x</p> Price: $10.00 - $100.00 
           </div>
-          <div className="bg-green-800 text-white px-3 rounded-full whitespace-nowrap">
-            Best Seller X
+          <div className="bg-zinc-50 text-black font-bold shadow rounded-2xl px-2 py-1">
+           <p className="inline text-red-500 rounded-full px-1 font-normal bg-zinc-300 hover:cursor-pointer hover:font-bold">x</p> Best Seller 
           </div>
-          <div className="bg-green-800 text-white px-3 rounded-full whitespace-nowrap">
-            In Stock
+          <div className="bg-zinc-50 text-black font-bold shadow rounded-2xl px-2 py-1">
+           <p className="inline text-red-500 rounded-full px-1 font-normal bg-zinc-300 hover:cursor-pointer hover:font-bold">x</p> In Stock
           </div>
           <p className="text-orange-400 underline cursor-pointer hover:text-orange-600">Clear all</p>
         </div>
