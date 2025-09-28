@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import backgroundImage from "../assets/background.jpeg"
 
 export default function Hero({page}) {

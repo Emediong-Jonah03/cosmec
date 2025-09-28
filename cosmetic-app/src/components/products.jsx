@@ -1,47 +1,22 @@
-import { useState, useEffect } from "react";
-
-import Cart from "../pages/Cart";
-
 import { FaStar } from "react-icons/fa";
 import { FaCartPlus } from "react-icons/fa";
 import { BiPurchaseTagAlt } from "react-icons/bi";
 
-function Product(prop) {
-  const [cartItem, setCartItem] = useState(()=> {
-   try { 
-    const storedCart = localStorage.getItem('cart')
-    return storedCart ? JSON.parse(storedCart) : []
-  } catch {
-    return [];
-  }
-  });
-
-  useEffect(()=> {
-    localStorage.setItem('cart', JSON.stringify(cartItem))
-  }, [cartItem])
-
-  function addToCart(productToAdd) {
-    setCartItem(prevItem => {
-      const existingItem = prevItem.find(item => item.id === productToAdd)
-      if (existingItem ) {
-        return prevItem.map(item => item.id === productToAdd ? {...item, quantity: item.quantity + 1} : item)
-      } else {
-        return [...prevItem, {...productToAdd, quantity: 1}]
-      }
-    });
-  }
-/* const cartItems = cart.reduce((accumulator, item)=> {
-  return accumulator + item.quantity
- }, 0)*/
-
- //console.log(cartItems)
- 
+function Product({
+  img,
+  productName,
+  price,
+  oldPrice,
+  rating,
+  category,
+  discount,
+}) {
   return (
     <div>
-      <div className="relative w-auto h-72">
-        <img src={prop.img} alt="" className="w-full h-full rounded-3xl" />
-        <div className="absolute top-5 left-5 bg-green-800 px-2 rounded-xl text-white sm:text-sm text-xl">
-          {prop.discount}% Off
+      <div className="relative w-auto h-67">
+        <img src={img} alt="" className="w-full h-full rounded-3xl" />
+        <div className="absolute top-5 left-5 bg-green-800 px-3 rounded-full text-white text-sm">
+          {discount}% Off
         </div>
       </div>
       <div className="py-3 w-auto leading-loose bg-white px-4">
@@ -80,13 +55,7 @@ function Product(prop) {
             </button>
           </div>
           <div>
-            <button
-              className="border-green-700 border-solid flex items-center gap-2 border-2 px-2 rounded-full hover:bg-green-500 hover:text-white hover:opacity-85 transition-colors duration-300"
-              onClick={() => addToCart(prop)} 
-            >
-              <FaCartPlus />
-              Add to Cart
-            </button>
+            <button className="border-green-700 border-solid flex items-center gap-2 border-2 px-2 rounded-full hover:bg-green-500 hover:text-white hover:opacity-85"><FaCartPlus />Add to Cart</button>
           </div>
         </div>
       </div>
