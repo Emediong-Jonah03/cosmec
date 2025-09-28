@@ -39,15 +39,6 @@ export default function NavBar({ choice, toggleLiked, toggleSearch}) {
             <Link to="/">Home</Link>
           </li>
           <li className="hover:text-green-600 cursor-pointer transition-colors duration-300">
-           <Link to="/shop">Shop</Link>
-          </li>
-          <li className="hover:text-green-600 cursor-pointer transition-colors duration-300">
-           <Link to="/skin">Skin Care</Link>
-          </li>
-          <li className="hover:text-green-600 cursor-pointer transition-colors duration-300">
-           <Link to="/hair">Hair Care</Link>
-          </li>
-          <li className="hover:text-green-600 cursor-pointer transition-colors duration-300">
             <Link to="/about">About Us</Link>
           </li>
         </ul>
@@ -86,17 +77,7 @@ export default function NavBar({ choice, toggleLiked, toggleSearch}) {
               <IoMdHome className="w-7 h-7" />
              <Link to="/home">Home</Link>
             </li>
-            <li className="hover:text-green-600 cursor-pointer transition-colors duration-300 flex">
-              <Link to="/shop"><FaShoppingBag className="w-7 h-7" />
-              Shop</Link>
-            
-            </li>
-            <li className="hover:text-green-600 cursor-pointer transition-colors duration-300 flex">
-              <Link to="/skin">Skin Care</Link>
-            </li>
-            <li className="hover:text-green-600 cursor-pointer transition-colors duration-300 flex">
-             <Link to="/hair">Hair Care</Link>
-            </li>
+           
             <li className="hover:text-green-600 cursor-pointer transition-colors duration-300 flex">
              <Link to="/about">About Us</Link>
             </li>

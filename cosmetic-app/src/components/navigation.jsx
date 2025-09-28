@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-dom"
 
 import { CiMenuBurger } from "react-icons/ci";
 import { FaSearch } from "react-icons/fa";
@@ -83,7 +84,7 @@ export default function NavBar({ choice, toggleLiked, toggleSearch }) {
           <ul className="flex flex-col gap-3">
             <li className="hover:text-green-600 cursor-pointer transition-colors duration-300 flex">
               <IoMdHome className="w-7 h-7" />
-              Home
+             <link rel="stylesheet" href="" />
             </li>
             <li className="hover:text-green-600 cursor-pointer transition-colors duration-300 flex">
               <FaShoppingBag className="w-7 h-7" />
